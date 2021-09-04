@@ -43,7 +43,7 @@ const AddBook = () => {
       <form onSubmit={handdleSubmit}>
         <input value={book.title} name="title" placeholder="Add a title book" onChange={(e) => onInputChange(e)} />
         <select name="category" defaultValue="category" onChange={(e) => onInputChange(e)}>
-          <option value="category" disabled>Category</option>
+          <option value="category">Category</option>
           {options.map((option) => (
             <option
               key={option.id}
