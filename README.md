@@ -2,9 +2,9 @@
 
 # BookStore
 
-> BookStore made with React/Redux.
+> BookStore made with React/Redux and BookStore API.
 
-<!-- ![screenshot](./app_screenshot.png) -->
+![screenshot](./app_screenshot.png)
 
 ## Built With
 
