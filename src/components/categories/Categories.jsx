@@ -1,7 +1,6 @@
-/* eslint-disable linebreak-style */
 const Categories = () => (
   <div className="categories">
-    <h3>Under construcciont</h3>
+    <h3>Under construction</h3>
   </div>
 );
 

@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchGetBooks } from '../../redux/books/books.actions';
 import AddBook from './add-book/AddBook';
 import BooksDisplay from './books-display/BooksDisplay';
+import './books.css';
 
 const MainBooks = () => {
   const store = useSelector((state) => state);
@@ -15,7 +16,6 @@ const MainBooks = () => {
 
   return (
     <div>
-      <h1>Books</h1>
       <BooksDisplay bookList={bookList} />
       <AddBook />
     </div>

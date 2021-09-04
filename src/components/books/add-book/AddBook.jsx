@@ -3,6 +3,7 @@ import { useState } from 'react';
 import uuid from 'react-uuid';
 import { useDispatch } from 'react-redux';
 import { fetchAddNewBook } from '../../../redux/books/books.actions';
+import './addBookForm.css';
 
 const options = [
   { id: 1, name: 'tech' },
@@ -38,23 +39,24 @@ const AddBook = () => {
     });
   };
   return (
-    <div className="add-book">
-      <h1>Add Book</h1>
+    <div className="formDiv">
       <form onSubmit={handdleSubmit}>
-        <input value={book.title} name="title" placeholder="Add a title book" onChange={(e) => onInputChange(e)} />
-        <select name="category" defaultValue="category" onChange={(e) => onInputChange(e)}>
-          <option value="category" disabled>Category</option>
-          {options.map((option) => (
-            <option
-              key={option.id}
-              value={option.name}
-            >
-              {option.name}
-            </option>
-          ))}
-
-        </select>
-        <button type="submit">ADD BOOK</button>
+        <h5 className="form-title">ADD NEW BOOK</h5>
+        <div className="d-flex mt-3">
+          <input type="text" value={book.title} name="title" className="form-control input-title" onChange={(e) => onInputChange(e)} placeholder="Book title" />
+          <select className="select-form" name="category" defaultValue="" onChange={(e) => onInputChange(e)}>
+            <option value="category" disabled>Category</option>
+            {options.map((option) => (
+              <option
+                key={option.id}
+                value={option.name}
+              >
+                {option.name}
+              </option>
+            ))}
+          </select>
+          <button type="submit" className="btn btn-primary add-book">ADD BOOK</button>
+        </div>
       </form>
     </div>
   );

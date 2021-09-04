@@ -5,22 +5,21 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import GlobalStyles from '../styles/GlobalStyles';
 import Navbar from './navbar/Navbar';
 import MainBooks from './books/MainBooks';
 import Categories from './categories/Categories';
+import './App.css';
 
 class App extends react.PureComponent {
   render() {
     return (
       <Router>
-        <GlobalStyles />
         <Navbar />
         <Switch>
           <Route path="/" exact>
             <MainBooks />
           </Route>
-          <Route path="/category">
+          <Route path="/categories">
             <Categories />
           </Route>
         </Switch>
