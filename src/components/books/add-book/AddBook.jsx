@@ -45,7 +45,7 @@ const AddBook = () => {
         <div className="d-flex mt-3">
           <input type="text" value={book.title} name="title" className="form-control input-title" onChange={(e) => onInputChange(e)} placeholder="Book title" />
           <select className="select-form" name="category" defaultValue="" onChange={(e) => onInputChange(e)}>
-            <option value="category" disabled>Category</option>
+            <option value="category">Category</option>
             {options.map((option) => (
               <option
                 key={option.id}
